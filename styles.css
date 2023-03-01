@@ -1,0 +1,186 @@
+ #wrapper{
+    max-width: 960px;
+    margin: 0 auto;
+
+}
+#header{
+    background-image: 
+    url('https://anhcuoiviet.vn/wp-content/uploads/2023/02/hinh-nen-dep-0.jpg');
+    /* background-color: rgb(13, 209, 13); */
+    color: rgb(247, 243, 243);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    text-align: center;
+    padding: 5px;
+    height: 95vh; /*do lon bgr*/
+    clip-path: ellipse(86% 51% at 53% 35%); /*bgr bo*/
+
+}
+#footer{
+    background-color: rgb(129, 131, 133);
+    padding: 15px;
+}
+/* can-ngang */
+#wp-content{
+    display: flex;
+}
+/* id # */
+#sidebar{
+    flex-basis: 30%;
+    background-color: #f5f5f5;
+    padding: 10px 15px;
+}
+/* class . */
+.list-course{
+    padding-left: 0px;
+    list-style: none;
+}
+#content{
+    flex-basis: 70%;
+}
+.gach-chan{
+    text-decoration: underline;
+    
+}
+#wp-content img{
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px 20px 20px 20px;
+}
+body{
+    
+    margin: 0;
+}
+/* can chinh chu cua bgr  */
+.bgr{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* bottom */
+.btn, 
+.btn:link, 
+.btn:visited{
+text-transform: uppercase;
+text-decoration: none;
+padding: 15px 40px;
+display: inline-block;
+border-radius: 100px;
+font-size: 16px;
+position: relative;
+}
+/* bgr start  */
+.btn-white{
+    color: #777777;
+    background-color: #fff;
+}
+/* chuyen dong botton */
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 50px 20px rgba(0, 0, 0, .2);
+}
+.btn:active{
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 50px 10px rgba(0, 0, 0, .2);;
+}
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100px;
+    background-color: #fff;
+    z-index: -1;
+    transition: all .4s;
+}
+/* hieu ung nhan  */
+.btn-white::after{
+    background-color: #fff;
+}
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+@keyframes animationtest {
+    0%{
+        opacity: 0;
+        transform: translate(0, -100px);
+    }
+
+    80%{
+        transform: translate(0, -20px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0,0)
+    }
+}
+.chu{
+    animation: moveInLeft 1s ease-out;
+}
+.chu{
+    /* animation-name: animationtest; */
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    animation-delay: 0.2s;
+    animation: moveInLeft 1s ease-out;
+}
+.chuu{
+    animation: moveInRight 1s ease-out
+}
+.btn-animated{
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+}
+/* phipari tu trai qua */
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* phai qua */
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* duoi len  */
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
